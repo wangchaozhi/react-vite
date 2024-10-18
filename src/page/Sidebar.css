@@ -1,0 +1,38 @@
+/* 覆盖 .ant-layout-sider 的宽度样式 */
+.sidebar {
+    min-width: 15rem !important;
+    max-width: 15rem !important;
+    width: 15rem !important;
+}
+
+/* 自定义菜单的样式 */
+.custom-menu .ant-menu-item {
+    font-size: 1rem; /* 设置字体大小 */
+    font-weight: 500; /* 设置字体粗细 */
+    line-height: 48px; /* 调整行高，使文字垂直居中 */
+    color: #000; /* 设置字体颜色 */
+    padding-left: 2rem !important; /* 调整左边距 */
+}
+
+/* 菜单项选中时的样式 */
+.custom-menu .ant-menu-item-selected {
+    background-color: #e6f7ff; /* 设置选中状态的背景色 */
+    color: #1890ff; /* 选中时的字体颜色 */
+}
+
+/* 图标与文字的间距 */
+.custom-menu .ant-menu-item .ant-menu-title-content {
+    margin-left: 0.5rem !important;
+}
+
+/* 禁用 iOS 上的点击高亮 */
+.sidebar .ant-menu-item {
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* 禁用点击高亮 */
+}
+
+
+
+
+
+/* 如果有其他样式需求也可以在这里定义 */

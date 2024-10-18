@@ -1,0 +1,21 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/images/dragonlearn.webp");
+    background-color: #f0f2f5;
+    background-size: cover; /* 覆盖整个容器 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 不重复背景图 */
+    background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+}
+
+.ant-form {
+    width: 300px;
+    margin-bottom: 3rem;
+    padding: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    border-radius: 8px;
+}

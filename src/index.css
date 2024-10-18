@@ -1,0 +1,51 @@
+/* index.css */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* 确保 Ant Design 的 Layout 组件和 Sidebar 组件高度为 100% */
+.ant-layout {
+    height: 100%;
+
+}
+
+.ant-layout-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+footer {
+    background-color: #f0f2f5;
+    text-align: center;
+    height: 60px;
+    line-height: 60px; /* 让文本垂直居中 */
+}
+
+html {
+     font-size: 12px; /* 设置根元素的字体大小 */
+
+ }
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 12px; /* 当屏幕宽度小于或等于1200px时，html的字体大小为14px */
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 10px; /* 当屏幕宽度小于或等于800px时，html的字体大小为12px */
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 8px; /* 当屏幕宽度小于或等于600px时，html的字体大小为10px */
+    }
+}
+

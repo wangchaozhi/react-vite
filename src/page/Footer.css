@@ -1,0 +1,8 @@
+
+.ant-layout-footer {
+    background-color: #f0f2f5; /* 设置背景色 */
+    text-align: center;
+    height: 2rem; /* 设置合适的高度 */
+    padding: 2rem 0; /* 控制内边距 */
+    line-height: 2rem; /* 设置文本的行高 */
+}

@@ -1,0 +1,8 @@
+/* Content 容器样式 */
+.content-container {
+    padding: 40px 40px;  /* 上下内边距24px，左右内边距40px */
+    margin: 0;
+    min-height: 280px;
+    background-color: #fff; /* 可选：设置背景颜色 */
+    box-sizing: border-box; /* 确保内边距不会影响整体宽度 */
+}

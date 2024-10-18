@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001529;
+    padding: 0 1rem;
+    height: 6rem;
+}
+
+.custom-button {
+    font-size: 1rem !important;  /* 强制覆盖默认样式 */
+    gap: 0.3rem;  /* 图标和文字之间的间距 */
+    width: 5rem;
+    height: 3rem;
+}
+
+/* Modal 的样式 */
+.custom-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-form {
+    box-shadow: none !important; /* 无阴影 */
+    margin: 0;
+    padding: 0 !important;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+/* 右侧通知和头像部分 */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem; /* 图标和头像之间的间距 */
+}
+
+.notification-badge {
+    cursor: pointer;
+}
+
+.notification-badge .ant-badge-count {
+    background-color: red;
+}
+
+.notification-badge svg  {
+    font-size: 2rem;
+}
+
+.avatar {
+    cursor: pointer;
+    width: 3.8rem;  /* 自定义宽度 */
+    height: 3.8rem; /* 自定义高度 */
+}
+
+/* 鼠标悬停时触发摇晃动画 */
+.notification-badge:hover {
+    animation: shake 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+/* 添加铃铛摇晃效果的动画 */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

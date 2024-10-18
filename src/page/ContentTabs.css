@@ -1,0 +1,30 @@
+/* 控制 Tabs 外层容器的高度和宽度 */
+.tabs-container {
+    width: 100%; /* 根据需要调整宽度 */
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-tabs-nav-list{
+    height: 3rem; /* 根据需要调整高度 */
+
+}
+.ant-tabs-tab{
+    font-size: 1rem !important;
+}
+.ant-tabs {
+    height: 3rem; /* 根据需要调整高度 */
+}
+/*!* 控制具体 Tab 页内容的样式 *!*/
+/*.ant-tabs {*/
+/*    flex: 1; !* 让 Tabs 占满父容器 *!*/
+/*}*/
+
+/*.ant-tabs-content-holder {*/
+/*    height: 100%; !* 确保内容区域高度填满 *!*/
+/*}*/
+
+/*.ant-tabs-tabpane {*/
+/*    height: calc(100% - 48px); !* 根据 Tab Header 的高度调整内容高度 *!*/
+/*    overflow: auto; !* 如果内容超出高度则滚动 *!*/
+/*}*/
