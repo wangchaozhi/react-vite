@@ -5,6 +5,7 @@ import { Button, Form, Input, Checkbox, message } from 'antd';
 import './Login.css';
 import { useEffect, useState } from 'react';
 import { post } from '../api/index.js'; // 确保路径正确
+import { throttle } from '../utils/throttle.js'; // 导入节流工具
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -25,8 +26,8 @@ const Login = () => {
         }
     }, [form, loginData]); // 确保 loginData 在依赖中
 
-    // 表单提交逻辑
-    const onFinish = async (values) => {
+    // 表单提交逻辑，使用节流函数包装
+    const onFinish = throttle(async (values) => {
         try {
             const response = await post('/user/login', values);
 
@@ -34,8 +35,7 @@ const Login = () => {
                 const { token } = response.data;
                 localStorage.setItem('authToken', token); // 存储 Token
 
-                // 更新 Redux 状态并跳转
-                dispatch(login({ ...values, remember }));
+                dispatch(login({ ...values, remember })); // 更新 Redux 状态
                 message.success('登录成功');
                 navigate('/'); // 跳转到主页
             } else {
@@ -45,7 +45,7 @@ const Login = () => {
             message.error('登录失败，请检查网络或用户名密码');
             console.error('登录请求错误:', error);
         }
-    };
+    }, 1000); // 设置节流时间为 1 秒
 
     // 复选框状态变化处理
     const handleRememberChange = (e) => {
